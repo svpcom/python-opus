@@ -41,10 +41,10 @@ class Encoder(object):
         encoder.ctl(self._state, ctl.reset_state)
 
     def encode(self, data, frame_size):
-        return encoder.encode(self._state, data, frame_size, len(data))
+        return encoder.encode(self._state, data, frame_size, 4000)
 
     def encode_float(self, data, frame_size, decode_fec=False):
-        return encoder.encode_float(self._state, data, frame_size, len(data))
+        return encoder.encode_float(self._state, data, frame_size, 4000)
 
     # CTL interfaces
 
